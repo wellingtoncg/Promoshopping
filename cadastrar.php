@@ -15,7 +15,6 @@ if ( isset($_POST['nome']) && isset($_POST['telefone']) && isset($_POST['email']
 	$telefone = mysqli_real_escape_string($db,$_POST['telefone']);
 	$email = mysqli_real_escape_string($db,$_POST['email']);
 	
-	//?nome=TIBERIUS&telefone=(81)9988990-009&email=tiberius.macedo@gmail.com&senha=123mudar
 	//Here converting passsword into MD5 encryption. 
 	$senha = md5(mysqli_real_escape_string($db, $_POST['senha']));	
 	
@@ -57,7 +56,7 @@ if ( isset($_POST['nome']) && isset($_POST['telefone']) && isset($_POST['email']
 				$mail->Host = 'smtp.gmail.com'; // Endereço do servidor SMTP
 				$mail->Debug  = 2;
 				$mail->SMTPAuth = true; // Usa autenticação SMTP? (opcional)
-				$mail->Username = 'tiberius.macedo@gmail.com'; // Usuário do servidor SMTP
+				$mail->Username = 'email.email@gmail.com'; // Usuário do servidor SMTP
 				$mail->Password = '123mudar'; // Senha do servidor SMTP
 				
 				// Define o remetente
